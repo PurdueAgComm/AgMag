@@ -147,3 +147,14 @@ header {
       opacity: 1;
   }
 }
+
+
+.bleed-left {
+  margin-left: -262px;
+}
+
+@media (max-width: 1200px){
+  .bleed-left {
+  margin-left: 0;
+  }
+}
