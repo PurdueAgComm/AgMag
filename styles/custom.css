@@ -1,0 +1,42 @@
+.navbar {
+  border-bottom: 7px solid #FFD100;
+}
+
+.landing {
+    background-image: url("../img/mag-bg.jpg");
+    min-height: 100vh;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mag-headline {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.mag-headline span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.scroll {
+  color: white;
+}
+
+.fix-bottom {
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
