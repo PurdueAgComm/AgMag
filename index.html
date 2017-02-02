@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/custom.css?v=1.0">
 
+  <script src="https://use.fontawesome.com/7dd766d14a.js"></script>
+
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -23,11 +25,11 @@
   <div class="landing">
     <div class="mag-headline">
       <span class="border">GUYANA RESEARCH HEADLINE</span>
-      <div class="scroll">Scroll Down, yo</div>
+      <div id="test" style="color: white;"><p>Read More</p> <i class="fa fa-chevron-down" aria-hidden="true"></i> </div>
     </div>
   </div>
 
-   <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded">
+   <nav class="navbar navbar-toggleable-md navbar-light bg-faded" data-toggle="affix">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -65,8 +67,8 @@
     <div class="row">
       <div class="col-xs-12">
 
-      <h1>Typgography</h1>
-
+      <h1>Typography</h1>
+        <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, corrupti natus. Eveniet, mollitia facilis! Fugiat ea atque blanditiis sit quibusdam animi quos laborum eveniet tempore amet enim omnis sint, similique voluptate esse aperiam labore veniam cum ex architecto culpa perspiciatis debitis libero, sapiente optio. Nihil adipisci fugit, quam recusandae nostrum esse, totam praesentium obcaecati quas iste culpa eveniet velit officiis! Qui veritatis facilis tenetur porro quasi exercitationem, necessitatibus accusantium, ipsum quam voluptatum cum alias molestiae libero reprehenderit hic sit ipsam itaque illum perspiciatis officia eius minus amet explicabo. Dolorem maxime porro expedita blanditiis, hic repudiandae magnam placeat. Praesentium reiciendis, nesciunt ex voluptas in doloribus similique eos blanditiis. Nam at optio blanditiis, corrupti, quibusdam obcaecati cupiditate. Unde, tempore sunt porro quidem consequatur, eos corporis est! Officia tenetur consequuntur excepturi suscipit aut magnam earum eos odio necessitatibus, magni voluptatum ducimus eveniet modi facere ea libero accusamus natus dignissimos laboriosam, minus tempora soluta temporibus fugiat quae? Adipisci ab consequuntur provident dolores necessitatibus ea sapiente eos reiciendis maiores eligendi, iusto maxime quae accusantium suscipit iure, ratione eius nam, animi dolore. Vel libero excepturi, ducimus suscipit quo, saepe! Consequatur nemo repellat, totam numquam ratione illo eos, ipsam, dolores nobis corrupti sapiente fuga unde. Aliquam, libero!</p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, corrupti natus. Eveniet, mollitia facilis! Fugiat ea atque blanditiis sit quibusdam animi quos laborum eveniet tempore amet enim omnis sint, similique voluptate esse aperiam labore veniam cum ex architecto culpa perspiciatis debitis libero, sapiente optio. Nihil adipisci fugit, quam recusandae nostrum esse, totam praesentium obcaecati quas iste culpa eveniet velit officiis! Qui veritatis facilis tenetur porro quasi exercitationem, necessitatibus accusantium, ipsum quam voluptatum cum alias molestiae libero reprehenderit hic sit ipsam itaque illum perspiciatis officia eius minus amet explicabo. Dolorem maxime porro expedita blanditiis, hic repudiandae magnam placeat. Praesentium reiciendis, nesciunt ex voluptas in doloribus similique eos blanditiis. Nam at optio blanditiis, corrupti, quibusdam obcaecati cupiditate. Unde, tempore sunt porro quidem consequatur, eos corporis est! Officia tenetur consequuntur excepturi suscipit aut magnam earum eos odio necessitatibus, magni voluptatum ducimus eveniet modi facere ea libero accusamus natus dignissimos laboriosam, minus tempora soluta temporibus fugiat quae? Adipisci ab consequuntur provident dolores necessitatibus ea sapiente eos reiciendis maiores eligendi, iusto maxime quae accusantium suscipit iure, ratione eius nam, animi dolore. Vel libero excepturi, ducimus suscipit quo, saepe! Consequatur nemo repellat, totam numquam ratione illo eos, ipsam, dolores nobis corrupti sapiente fuga unde. Aliquam, libero!</p>
@@ -93,5 +95,44 @@
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+
+
+<script>
+$(document).ready(function() {
+
+  var toggleAffix = function(affixElement, scrollElement, wrapper) {
+
+    var height = affixElement.outerHeight(),
+        top = wrapper.offset().top;
+
+    if (scrollElement.scrollTop() >= top){
+        wrapper.height(height);
+        affixElement.addClass("affix");
+    }
+    else {
+        affixElement.removeClass("affix");
+        wrapper.height('auto');
+    }
+
+  };
+
+
+  $('[data-toggle="affix"]').each(function() {
+    var ele = $(this),
+        wrapper = $('<div></div>');
+
+    ele.before(wrapper);
+    $(window).on('scroll resize', function() {
+        toggleAffix(ele, $(this), wrapper);
+    });
+
+    // init
+    toggleAffix(ele, $(window), wrapper);
+  });
+
+});
+</script>
 </body>
 </html>
